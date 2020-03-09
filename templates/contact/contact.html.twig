@@ -1,7 +1,43 @@
-{%  extends 'base.html.twig' %}
+
 
 {%  block main %}
-<h1>facial</h1>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">optreden lijst</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="https://127.0.0.1:8000/artiest/">artiesten-lijst</a></li>
+                <li><a href="https://127.0.0.1:8000/optreden/">optreden-lijst</a></li>
+                <li><a href="https://127.0.0.1:8000/contact/">contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3>Welkom bij het contact pagina van het optreden-lijst</h3>
+        <p>Deze pagina bevat een contactformulier</p>
+    </div>
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+    </body>
+    </html>
 <div>
     {{  form_start(our_form) }}
     {{  form_widget(our_form) }}
